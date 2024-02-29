@@ -23,4 +23,6 @@ jobs:
     - name: Build ags
       run: |
         nix build --print-build-logs
+        echo "OUTPATH: $(readlink result)"
         nix build --print-build-logs .#agsWithTypes
+        echo "OUTPATH: $(readlink result)"
